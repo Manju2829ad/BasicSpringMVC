@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="OTP.css">
+</head>
+<body>
+    <div class="OTP">
+        <h1>Verify With OTP</h1>
+        <h6>OTP sent to <span id="mobile-number"></span></h6>
+        <h1 id="OTP">Your OTP is </h1>
+        <form class="OTPFORM" id="otp-form">
+            <div class="OTP-fields">
+                <input type="text" id="otp1" class="otp-input" maxlength="1">
+                <input type="text" id="otp2" class="otp-input" maxlength="1">
+                <input type="text" id="otp3" class="otp-input" maxlength="1">
+                <input type="text" id="otp4" class="otp-input" maxlength="1">
+            </div>
+            <button type="submit">Verify OTP</button>
+            <h3 id="error"></h3>
+        </form>
+    </div>
+    <script>
+        let otp;
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            // This function will run when the DOM is fully loaded
+            function onOTPPageLoad() {
+                console.log("OTP Page loaded");
+
+                // Generate a random 4-digit OTP
+                otp = Math.floor(1000 + Math.random() * 9000).toString();
+                console.log(otp); // For debugging purposes, prints the OTP to the console
+
+                // Display the OTP in the <h1> tag
+                document.getElementById('OTP').textContent = 'Your OTP is ' + otp;
+            }
+            onOTPPageLoad();
+        });
+
+        document.getElementById('otp-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const otp1 = document.getElementById('otp1').value;
+            const otp2 = document.getElementById('otp2').value;
+            const otp3 = document.getElementById('otp3').value;
+            const otp4 = document.getElementById('otp4').value;
+
+            const enteredOtp = otp1 + otp2 + otp3 + otp4;
+
+            if (enteredOtp === otp) {
+                window.location.href = 'home.html';
+            } else {
+
+                   const error =document.getElementById('error');
+                       error.textContent='Incorrect OTP. Please refresh the page and re-enter the OTP.'
+
+            }
+        });
+    </script>
+</body>
+</html>

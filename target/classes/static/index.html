@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://use.typekit.net/your-typekit-id.css">
+</head>
+<body>
+    <div class="Header">Welcome to Ekart!</div>
+    <div class="SignUp-Container">
+<form name="login" id="login" action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+            <h1 id="heading">Login to e-kart</h1>
+            <label id="lab-gmail" for="gmail">Enter your Gmail</label>
+            <input id="gmail" type="text" name="gmail" value="">
+            <a id="phonenumber" href="phonenumber.html">Use your Phone number instead</a>
+            <a id="ExistingUser" href="Signup.html">New to eKart? Signup</a>
+            <input id="button" type="submit" value="Next">
+        </form>
+    </div>
+    <div class="footer">Copyrights e-kart 2024</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('inside the event listener');
+            const form = document.getElementById('login');
+            const emailField = document.getElementById('gmail');
+
+            if (form && emailField) {
+                console.log('inside the if');
+                form.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    
+                    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    
+                    // Remove any existing error message
+                    let existingError = document.querySelector('.error');
+                    if (existingError) {
+                        existingError.remove();
+                    }
+                    
+                    if (!emailPattern.test(emailField.value)) {
+                        // Create and insert the error message
+                        let errorMessage = document.createElement('span');
+                        errorMessage.textContent = 'Please enter a valid email ID';
+                        errorMessage.className = 'error';
+                        emailField.insertAdjacentElement('afterend', errorMessage);
+                    }
+                });
+            } else {
+                console.error('Form or email field not found.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+body{
+
+background-color: hsl(216, 22%, 95%);
+}
+
+
+.footer {
+    width: 100vw;
+    height: 80px;
+    background-color: #212121;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+
+.navbar{
+width: 100vw;
+background-color: #427AE9;
+height: 60px;
+}
+
+
+
+#search{
+width: 500px;
+height: 30px;
+border-radius: 10px;
+position: relative;
+left: 250px;
+top: 10px;
+border: none;
+font-weight: 500;
+font-size: 16px;
+background-color: #F0F5FF;
+}
+
+
+.Logout {
+    position: absolute;
+top: 15px;
+right: 200px;
+
+}
+
+.logoutText {
+    font-size: 18px;
+    color: #2874F0;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: white;
+    border: 1px solid #2874F0;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.logoutText:hover {
+    background-color: #2874F0;
+    color: white;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 150px;
+    z-index: 1;
+}
+
+.dropdown-menu a{
+
+    text-decoration:  none;
+    /* color: #2874F0; */
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    text-align: center;
+    color: hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #abb3efaa;
+    color: white;
+}
+
+
+.Logout:hover .dropdown-menu {
+    display: block;
+}
+
+
+.CustomerName{
+width: 300px;
+position: absolute;
+left: 100px;
+height:100px;
+background-color: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+}
+
+
+.Customer-menu{
+width: 300px;
+height: 600px;
+background-color: #FFFFFF;
+position: relative;
+top:200px;
+left: 100px;
+} 
+
+
+.CustomerName img {
+
+    width:45px ;
+height:45px ;
+border-radius: 10px;
+position: relative;
+left: 20px;
+
+}
+
+
+#hello{
+position: absolute;
+top: 8px;
+left: 90px;
+font: 400;
+font-size: 18px;
+}
+
+#customername{
+position: relative;
+left: 50px;
+font-family: 'Times New Roman', Times, serif;
+font-weight: 600;
+}
+
+
+.MyOrders{
+width: 300px;
+height: 60px;
+    border-bottom: 1px solid black;
+}
+
+
+.MyOrders a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 30px 90px ;
+color: gray;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+}
+
+
+#symbol img{
+width: 20px;
+height: 20px;
+position: absolute;
+left: 260px;
+top: 30px;
+background-color: gray;
+}
+
+.AccoutSettings{
+color: gray;
+    width: 300PX;
+    height: 200PX;
+    border-bottom:1px solid #2a2121;
+
+}
+
+
+
+.AccoutSettings  a{
+color: black;
+    text-decoration: none;
+
+}
+
+
+.list  li {
+       display: inline-block;
+    padding: 10px 10px ;
+    margin: 0px 0px;
+    list-style: none;
+}
+
+
+
+
+.list li a {
+    text-decoration: none;
+    color: rgb(20, 102, 235);
+    padding: 10px;
+
+}
+
+
+.list li a:hover {
+
+    background-color: hwb(217 13% 5%);
+    color: white;
+       
+}
+
+
+/* Center the container and set dimensions */
+.centerdiv {
+    width: 700px;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    position: absolute;
+    top: 70px;
+    left: 450px;
+}
+
+/* Style the labels */
+label {
+    font-size: 25px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+}
+
+label a {
+    color: #2874F0;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Style the input fields */
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Style the flex container */
+.fl {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style individual inputs within the flex container */
+.fl input {
+    width: 48%; /* Use percentage for better responsiveness */
+    height: 35px;
+    margin-right: 0;
+}
+
+/* Style the gender label */
+#Gender {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Style the gender radio buttons container */
+.gender {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Custom radio button style */
+.gender input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Style individual labels for radio buttons */
+.gender label {
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Style the email and phone number labels */
+#email, #phonenumber {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Style the email and phone number inputs */
+input[type="email"], input[type="tel"] {
+    font-size: 16px;
+    padding: 10px;
+    width: calc(100% - 22px); /* Account for padding and border */
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}

@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: rgb(224, 224, 224);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.Header {
+    width: 100vw;
+    height: 80px;
+    background-color: #2874F0;
+    border-bottom: 1px solid chartreuse;
+    color: #f6eb26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Sign-Up Container */
+.SignUp-Container {
+    width: 500px;
+    background-color: rgba(208, 254, 247, 0.781);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Form Heading */
+#heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Field */
+#gmail {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    height: 40px;
+    border: none;
+    background-color: hwb(60 95% 4%);
+    border-bottom: 2px solid chartreuse; /* Add bottom border only */
+    border-radius: 5px;
+    padding: 0 10px; /* Horizontal padding */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 18px; /* Adjust font size for better fit */
+}
+
+/* Button */
+#button {
+    width: 100%;
+    height: 40px;
+    background-color: #FB641B;
+    color: wheat;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    width: 100vw;
+    height: 100px;
+    background-color: #212121;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+/* Existing User Link */
+#ExistingUser {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2874F0;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Center align and add spacing */
+}
+
+#ExistingUser:hover {
+    background-color: #1c5bb2;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block; /* Ensure the error message is on a new line */
+}

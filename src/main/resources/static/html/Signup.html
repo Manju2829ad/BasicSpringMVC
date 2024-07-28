@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+    <div class="Header">Welcome to Ekart !</div>
+    <div class="SignUp-Container">
+        <form class="SignUp" onsubmit="return handleRequest(event)" action="" method="post">
+            <input id="SingUp-input" type="tel" onchange="validate()" name="gmailorUsername" placeholder="Enter Email/Phonenumber">
+            <p id="output" class="error"></p>
+            <p id="otp" class="OTP"></p>
+            <input id="button" type="submit" value="Request OTP">
+        </form>
+        <a id="ExistingUser" href="index.html">Existing User? Login</a>  
+    </div>
+
+    <div class="footer">Copyrights e-kart 2024</div>
+    <script>
+        const output = document.getElementById('output');
+        const otp = document.getElementById('otp');
+
+        // function generateOTP() {
+        //     console.log('from otp method');
+        //     return Math.floor(100000 + Math.random() * 900000);
+        // }
+
+        function validate() {
+            let number = document.getElementById('SingUp-input').value;
+            if (number.length !== 10 || isNaN(number)) {
+                output.innerHTML = "Please enter a valid 10 digit number";
+                return false;
+            } else {
+                output.innerHTML = "";
+                return true;
+            }
+        }
+
+        function handleRequest(event) {
+            if (!validate()) {
+                console.log("Validation failed");
+                alert("Invalid phone number. Please correct it");
+                // event.preventDefault(); // Prevent form submission
+                return false
+            } else {
+                console.log("Validation successful");
+                // otp.innerHTML = generateOTP();
+
+                // Navigate to OTP page
+                window.location.href = 'OTP.html'; 
+                // Change 'otp.html' to your actual OTP page URL
+                 return false;
+            }
+        }
+    </script>
+</body>
+</html>

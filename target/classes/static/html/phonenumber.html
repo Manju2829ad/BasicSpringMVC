@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="phonenumber.css">
+</head>
+<body>
+        <div class="Header">Welcome to Ekart !</div>
+        <div class="Login">
+    <form name="login" onsubmit="return handleSubmit(event)"  id="login"  action="#" method="#" enctype="application/x-www-form-urlencoded">
+        <h1 id="heading" for="phonenumber">Login to e-kart</h1>
+    <label id="lab-phonenumber">enter your phonenumber</label>
+    <input class="phonenumber"  onchange="validate()" type="tel" id="phonenumber" name="phonenumber" value="" >
+    <p id="output" class=".error"></p>
+    <a   id="phonenumber" href="index.html">Use gmail instead</a>
+    <a id="SignUp" href="Signup.html">New to eKart ? Signup</a>
+    <input type="submit" onclick="" value="Next">
+    </form>
+        </div>
+        <div class="footer">Copyrights e-kart 2024</div>
+        <script>
+                   const output=document.getElementById('output');
+                   function validate(){
+                    console.log('Hello')
+const number=document.getElementById('phonenumber').value;
+if(number.length!==10||isNaN(number)){
+    output.innerText="Please enter a valid Number";
+    return false;
+}  else{
+    output.innerText=" ";
+    return true;
+}
+                   };
+function  handleSubmit(event){
+     if(!validate()){
+event.preventDefault();
+alert("Invalid phonenumber. Please correct it")
+                    }
+                   }
+        </script>
+</body>
+</html>

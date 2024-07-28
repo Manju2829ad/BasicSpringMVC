@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(224, 224, 224);
+}
+
+.SignUp-Container{
+width: 500px;
+height: 500px;
+background-color: rgba(208, 254, 247, 0.781);
+position: relative;
+top: 50px;
+left: 500px;
+border-radius: 50px;
+}
+
+
+.Header {
+    width: 100vw;
+    height: 80px;
+    background-color: #2874F0;
+    border-bottom: 1px solid chartreuse;
+    color: #f6eb26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+#SingUp-input{
+width:400px;
+height: 40px;
+position: relative;
+top: 150px;
+left: 50px;
+border: none;
+background-color: hwb(60 95% 4%);
+border-bottom: 2px solid  chartreuse; /* Add bottom border only */
+border-radius: 5px;
+padding: 0 10px; /* Horizontal padding */
+box-sizing: border-box;
+margin-bottom: 20px; 
+font-size: 25px;
+}
+
+
+#button{
+width:300px ;
+height: 40px;
+position: relative;
+top: 200px;
+left: 100px;
+background-color: #FB641B;
+color: wheat;
+font-size: 16px;
+}
+
+
+
+.footer {
+    width: 100vw;
+    height: 100px;
+    background-color: #212121;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+
+#ExistingUser {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2874F0;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    top:300px;left: 150px;
+}
+
+#ExistingUser:hover {
+    background-color: #1c5bb2;
+}
+
+
+
